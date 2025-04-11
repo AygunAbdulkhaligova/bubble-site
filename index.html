@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baloncuklu Site</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bubble Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8c8d7; /* Şeker pembesi */
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-    <div class="bubble-container">
-        <div class="bubble">Merhaba! 🎉</div>
-        <div class="bubble">Bu baloncuklar hareket ediyor! 🫧</div>
-        <div class="bubble">GitHub Pages ile yayındalar! 🚀</div>
-    </div>
+    <h1 style="text-align: center; color: black; font-size: 48px; margin-top: 20px;">
+        Merhaba! 🎉
+        Bu baloncuklar hareket ediyor! 🫧
+        GitHub Pages ile yayındalar! 🚀
+    </h1>
+
+    <canvas id="bubbleCanvas"></canvas>
 
     <script src="script.js"></script>
 </body>

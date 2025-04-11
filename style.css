@@ -1,15 +1,21 @@
 body {
-  margin: 0;
-  padding: 0;
-  background: #ffe6f2; /* şeker pembesi zemin */
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  color: #000;
-  overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f8c8d7; /* Şeker pembesi */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-size: 48px;
+    margin-top: 20px;
 }
 
 canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }

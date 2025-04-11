@@ -12,7 +12,7 @@ function createBubble() {
     y: canvas.height + 100,
     radius: Math.random() * 20 + 10,
     speed: Math.random() * 2 + 1,
-    color: "rgba(255, 182, 193, 0.6)", // açık pembe
+    color: "rgba(255, 182, 193, 0.6)", // Şeker pembesi
   });
 }
 
