@@ -1,0 +1,5 @@
+// Baloncukları hareket ettirme
+document.querySelectorAll('.bubble').forEach(bubble => {
+    bubble.style.left = `${Math.random() * window.innerWidth}px`;
+    bubble.style.top = `${Math.random() * window.innerHeight}px`;
+});

@@ -1,0 +1,52 @@
+/* Genel Sayfa Stili */
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Baloncuk Konteyneri */
+.bubble-container {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Baloncuk Stili */
+.bubble {
+    background-color: #ff69b4; /* Şeker pembesi */
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+    animation: bubbleAnimation 4s ease-in-out infinite;
+}
+
+/* Baloncuk Animasyonu */
+@keyframes bubbleAnimation {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+}
