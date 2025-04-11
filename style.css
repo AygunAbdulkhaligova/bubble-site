@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffe6f2; /* şeker pembesi zemin */
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #000;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
