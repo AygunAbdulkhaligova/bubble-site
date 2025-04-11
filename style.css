@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8c8d7; /* Şeker pembesi */
+    background-color: #9ed98f; /* Yeşil arka plan */
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -11,6 +11,7 @@ h1 {
     color: black;
     font-size: 48px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 canvas {
@@ -18,4 +19,5 @@ canvas {
     top: 0;
     left: 0;
     z-index: -1;
+    pointer-events: none; /* Fare etkileşimini engelleme */
 }

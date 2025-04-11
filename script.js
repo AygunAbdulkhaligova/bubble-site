@@ -6,13 +6,23 @@ canvas.height = window.innerHeight;
 
 let bubbles = [];
 
-function createBubble() {
+const bubbleColors = [
+  "rgba(0, 191, 255, 0.6)",  // Mavi
+  "rgba(255, 223, 0, 0.6)",  // Sarı
+  "rgba(230, 230, 250, 0.6)", // Lavanta
+  "rgba(255, 105, 180, 0.6)"  // Pembe
+];
+
+function createBubble(x, y) {
+  let radius = Math.random() * 20 + 10;
   bubbles.push({
-    x: Math.random() * canvas.width,
-    y: canvas.height + 100,
-    radius: Math.random() * 20 + 10,
+    x: x,
+    y: y,
+    radius: radius,
     speed: Math.random() * 2 + 1,
-    color: "rgba(255, 182, 193, 0.6)", // Şeker pembesi
+    color: bubbleColors[Math.floor(Math.random() * bubbleColors.length)],  // Rastgele renk
+    shadowColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.6)`,
+    shadowBlur: Math.random() * 20 + 10
   });
 }
 
@@ -22,8 +32,8 @@ function drawBubbles() {
     ctx.beginPath();
     ctx.arc(b.x, b.y, b.radius, 0, Math.PI * 2);
     ctx.fillStyle = b.color;
-    ctx.shadowColor = "#ffccff";
-    ctx.shadowBlur = 10;
+    ctx.shadowColor = b.shadowColor;
+    ctx.shadowBlur = b.shadowBlur;
     ctx.fill();
     ctx.closePath();
     b.y -= b.speed;
@@ -39,5 +49,13 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-setInterval(createBubble, 100);
+setInterval(() => {
+  createBubble(Math.random() * canvas.width, canvas.height + 20);
+}, 100);
+
 animate();
+
+// Fare ile tıklama ile yeni baloncuklar oluşturma
+canvas.addEventListener('click', (event) => {
+  createBubble(event.clientX, event.clientY);
+});
